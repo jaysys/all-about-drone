@@ -42,8 +42,8 @@
 
 | 필드명                           | 타입    | 값                                                         | 설명                 | 예시값   |
 | -------------------------------- | ------- | ---------------------------------------------------------- | -------------------- | -------- |
-| flight_status.phase              | string  | IDLE/TAKEOFF/HOVER/FLYING/LANDING/EMERGENCY                | 현재 비행 단계       | "IDLE"   |
-| flight_status.mode               | string  | MANUAL/STABILIZE/ALTITUDE_HOLD/POSITION_HOLD/AUTO/RTL/LAND | 비행 모드            | "MANUAL" |
+| flight_status.phase              | string  | IDLE/TAKEOFF/HOVER/FLYING/<br>LANDING/EMERGENCY                | 현재 비행 단계       | "IDLE"   |
+| flight_status.mode               | string  | MANUAL/STABILIZE/ALTITUDE_HOLD/<br>POSITION_HOLD/AUTO/RTL/LAND | 비행 모드            | "MANUAL" |
 | flight_status.armed              | boolean | true/false                                                 | 모터 활성화 상태     | false    |
 | flight_status.can_arm            | boolean | true/false                                                 | 무장 가능 여부       | true     |
 | flight_status.emergency_stop     | boolean | true/false                                                 | 비상 정지 상태       | false    |
