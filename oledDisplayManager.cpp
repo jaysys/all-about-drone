@@ -14,10 +14,24 @@ DisplayManager::DisplayManager()
 
 // Initialize display
 void DisplayManager::begin() {
+    // Add initial delay after power-up
+    delay(100);
+    
+    // Initialize with lower clock speed
     u8g2.begin();
-    u8g2.setContrast(255);  // Set maximum contrast
-    u8g2.setBusClock(400000);  // Set I2C clock to 400kHz
+    
+    // Add delay after begin()
+    delay(50);
+    
+    // Set contrast and other parameters
+    u8g2.setContrast(150);  // Reduced from 255 for better reliability
+    u8g2.setBusClock(100000);  // Reduced from 400kHz to 100kHz
     u8g2.setFont(u8g2_font_ncenB10_tr);
+    
+    // Optional: Add display clear and buffer reset
+    u8g2.clearBuffer();
+    u8g2.sendBuffer();
+    delay(10);
 }
 
 // Clear display
